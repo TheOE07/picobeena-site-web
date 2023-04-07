@@ -1,0 +1,80 @@
+@import "default.css";
+
+html {
+	height: 100%;
+	/*overflow: hidden;*/
+}
+
+body {
+	height: 100%;
+	text-align:center;
+	margin:0 auto;
+	overflow-y: hidden;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	background:url(../img/bg.jpg) repeat-x;
+	background-color:#ff4100;
+}
+
+#flashContent {
+	height: 100%;
+}
+
+#flash{
+	/*overflow:scroll*/
+}
+
+div#container{
+	width:900px;
+	text-align:center;
+	margin:0 auto;
+}
+
+div#header{
+	background:#31bac4;
+	
+}
+div#header li{
+	float:left;
+	display:inline;
+}
+.header01{
+	margin:7px 13px 0 21px;
+}
+.header02{
+	margin:25px 17px 0 15px;
+}
+.header03{
+	margin-top:22px;
+}
+
+div#contents{
+	clear:both;
+	margin:0 auto;
+	text-align:center;
+	width:870px;
+}
+
+div#contents li{
+	float:left;
+	display:inline;
+}
+ul.contents01{
+	padding-top:8px;
+}
+ul.contents02{
+	padding-top:4px;
+}
+div#footer{
+	clear:both;
+	width:900px;
+	margin:0 auto;
+	text-align:center;
+}
+
+div#footer p{
+	width:900px;
+	text-align:right;
+}
+div#footer p img{
+	margin-right:22px;
+}
