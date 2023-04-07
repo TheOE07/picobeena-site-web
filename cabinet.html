@@ -1,0 +1,72 @@
+<html>
+<head>
+<title>hello it is My Blog</title>
+</head>
+<style>body {
+      background-image: url('mmmm.png');}
+	  </style>
+	  <marquee direction="right" behavior="alternate"> hello it is My Blog </marquee>
+<h1> Building Taiko Arcade Cabinet Projekt </h1>
+<h2 style="color:mediumvioletred"> I really Really Like this Game> </h2>
+<h3 style="color:mediumvioletred"> what are you>? </h3>
+<h4> Taiko no Tatsujin is a rhythm game that uses drums and et cetera. I enjoy this game forever. <br>
+so i will make an arcade machine for it basically. 
+because there are arcade releases. <br>And IN the UK 
+it is so hard because there are no arcade machine, then the ones what are there are so bad. D:
+<br> And because I obsess with Taiko Tatsujin game I build one. <br>
+So it will be the versions 1 to 14 becuase they are the coolest. <br> </h4>
+<img src="taiko.png" height=200> This is basically what will happen. <br>
+<h2 style="color:mediumvioletred"> The progress what I have made so far. </h2>
+<h3> <a href="purgatory2.html">The Weeks in Early April (BIG progress has been being maded...) </a> </h3>
+<h3> <a href="purgatory.html">The 12th of March 2023.</a> </h3>
+<h3> The Previous Date - <a href="beforely.html"> Prologue. </a></h3>
+<h2> Otherly things </h2>
+<h3><a href="taiko.html"> Back to Taiko </a> <br>
+<a href="index.html"> BACK. </a> <br>
+<a href="resoure.html"> all the resources what i use </a></h3>
+<script>
+    function removeTransition(e) {
+      if (e.propertyName !== 'transform') return;
+      e.target.classList.remove('playing');
+    }
+  
+    function playSound(e) {
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+      if (!audio) return;
+  
+      key.classList.add('playing');
+      audio.currentTime = 0;
+      audio.play();
+    }
+  
+    const keys = Array.from(document.querySelectorAll('.key'));
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+    window.addEventListener('keydown', playSound);
+  </script> 
+
+<div class="keys">
+<div data-key="68" class="key">
+<kbd>D</kbd>
+<span class="sound">ka</span>
+</div>
+<div data-key="70" class="key">
+<kbd>F</kbd>
+<span class="sound">don</span>
+</div>
+<div data-key="74" class="key">
+<kbd>J</kbd>
+<span class="sound">don</span>
+</div>
+<div data-key="75" class="key">
+<kbd>K</kbd>
+<span class="sound">ka</span>
+</div>
+</div>
+<audio data-key="68" src="ka.mp3"></audio>
+<audio data-key="70" src="don.mp3"></audio>
+<audio data-key="74" src="don.mp3"></audio>
+<audio data-key="75" src="ka.mp3"></audio>
+</html>
+
+

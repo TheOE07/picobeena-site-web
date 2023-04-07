@@ -1,0 +1,109 @@
+<html>
+<head>
+<title>hello it is My Blog</title>
+<style>body {
+      background-image: url('pe.png');} </style>
+	  <marquee direction="right" behavior="alternate" style="color:white"> hello it is My Blog </marquee>
+<h1 style="color:white"> HEre are musics what I like in everyting. </h1>
+<h4 style="color:white"> It is my spotify acount <br>
+<iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/5grqALOrFfVadsK1UEnZdA?utm_source=generator" width="50%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<br><br>
+I am Enjoing music artists such as <a href="http://www.ceephax.co.uk"> Ceephax Acid Crew</a>, Squarepusher, And others .... <br>
+Am also Enhoing Sheena RIngo always.... <br> 
+<audio controls>
+<source src="doppel.wav" type="audio/mpeg">
+</audio>
+<audio controls>
+<source src="wish.wav" type="audio/mpeg">
+</audio>
+<audio controls>
+<source src="bath.wav" type="audio/mpeg">
+</audio>
+<audio controls>
+<source src="instinct.wav" type="audio/mpeg">
+</audio>
+<br> <div class="container"> 
+<img src="shiina.png" height=300>
+<img src="shiiiiina.jpg" height=300>
+</div>
+<br> Fistbump!
+<br>
+<h3 style="color:white"> Taiko Songs What I love... </h3>
+<h4 style="color:white"> mint tears... yozakura shanikusai... menkui miracle... takkyu de dakkyu... gekkabijin... fuun! bachiosensei... all of these...
+<br> Gekkabijin <audio controls>
+<source src="gekka.wav" type="audio/mpeg">
+</audio>
+<br> Menkui Miracle <audio controls>
+<source src="mira.wav" type="audio/mpeg">
+</audio>
+<br> Uchuu SAMURAI <audio controls>
+<source src="space.wav" type="audio/mpeg">
+</audio>
+<br> Yozakura Shanikusai <audio controls>
+<source src="shani.wav" type="audio/mpeg">
+</audio>
+<br> Karui Zawameki <audio controls>
+<source src="karui.wav" type="audio/mpeg">
+</audio>
+<br> Et cetera <audio controls>
+<source src="make.wav" type="audio/mpeg">
+</audio>
+<br> Neko Kujira <audio controls>
+<source src="neko.wav" type="audio/mpeg">
+</audio>
+<br> Diet Padarise <audio controls>
+<source src="diet.wav" type="audio/mpeg">
+</audio>
+<br> Eringi no Ekubo. <audio controls>
+<source src="ekubo.wav" type="audio/mpeg">
+</audio>
+<br> I add more or less when I feel, as I enjoy more songs! <br>
+These arenot the limits of my luv.
+<br> <h1> <a href="taiko.html"> Back 2 taiko page </a> <br>
+<a href="shiina.html"> Back 2 SHEENA </a> <br>
+<a href="index.html"> 
+
+<script>
+    function removeTransition(e) {
+      if (e.propertyName !== 'transform') return;
+      e.target.classList.remove('playing');
+    }
+  
+    function playSound(e) {
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+      if (!audio) return;
+  
+      key.classList.add('playing');
+      audio.currentTime = 0;
+      audio.play();
+    }
+  
+    const keys = Array.from(document.querySelectorAll('.key'));
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+    window.addEventListener('keydown', playSound);
+  </script> 
+
+<div class="keys">
+<div data-key="68" class="key">
+<kbd>D</kbd>
+<span class="sound">ka</span>
+</div>
+<div data-key="70" class="key">
+<kbd>F</kbd>
+<span class="sound">don</span>
+</div>
+<div data-key="74" class="key">
+<kbd>J</kbd>
+<span class="sound">don</span>
+</div>
+<div data-key="75" class="key">
+<kbd>D</kbd>
+<span class="sound">ka</span>
+</div>
+</div>
+<audio data-key="68" src="katt.mp3"></audio>
+<audio data-key="70" src="dongg.mp3"></audio>
+<audio data-key="74" src="dongg.mp3"></audio>
+<audio data-key="75" src="katt.mp3"></audio>
+</html>

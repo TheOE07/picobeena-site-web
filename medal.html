@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>hello it is My Blog</title>
+<style>body {
+      background-image: url("gryem.jpg") </style>
+	  <marquee direction="right" behavior="alternate" style="color:mediumvioletred"> hello it is My Blog </marquee>
+<h1> <a href="https://www.youtube.com/watch?v=_ocZaMu_YsA"> Link 1 </a> <br>
+<a href="https://www.youtube.com/watch?v=MQKdrgr73eE"> Link 2 </a> <br>
+<a href="https://www.youtube.com/watch?v=I6ZZrfHSQJo"> Link 3 </a> <br>
+<a href="https://www.youtube.com/watch?v=fqxIp_Rke1s"> Link 4 </a> <br>
+<a href="https://www.youtube.com/watch?v=fN_B0b0CDcQ"> Link 5 </a> <br>
+<a href="https://www.youtube.com/watch?v=LW5JtHIrC2U"> Link 6 </a> <br>
+<a href="pdfs.html"> GO BACK! </a> <br>
+<audio controls autoplay>
+  <source src="ekubo.wav" type="audio/wav">
+</audio>
+<script>
+    function removeTransition(e) {
+      if (e.propertyName !== 'transform') return;
+      e.target.classList.remove('playing');
+    }
+  
+    function playSound(e) {
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+      if (!audio) return;
+  
+      key.classList.add('playing');
+      audio.currentTime = 0;
+      audio.play();
+    }
+  
+    const keys = Array.from(document.querySelectorAll('.key'));
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+    window.addEventListener('keydown', playSound);
+  </script> 
+<h6>
+<div class="keys">
+<div data-key="68" class="key">
+<kbd>D</kbd>
+<span class="sound">ka</span>
+</div>
+<div data-key="70" class="key">
+<kbd>F</kbd>
+<span class="sound">don</span>
+</div>
+<div data-key="74" class="key">
+<kbd>J</kbd>
+<span class="sound">don</span>
+</div>
+<div data-key="75" class="key">
+<kbd>D</kbd>
+<span class="sound">ka</span>
+</div>
+</div>
+<audio data-key="68" src="kat.ogg"></audio>
+<audio data-key="70" src="dong.ogg"></audio>
+<audio data-key="74" src="dong.ogg"></audio>
+<audio data-key="75" src="kat.ogg"></audio>
+</h6>
+</html>

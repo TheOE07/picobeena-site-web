@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>hello it is My Blog</title>
+</head>
+<style>
+body {
+      background-image: url('Plev.png');} </style>
+	  <marquee direction="right" behavior="alternate"> hello it is My Blog </marquee>
+<h1>hello it is My Blog</h1>
+In fo abut me: I enjoy rhythm game arcade game arcade gaming <a href="cabinet.html">(I am building a Taiko no Tatsujin arcade cabinet..)</a>
+<br> Sheena Ringo japanese artist, <br> <a href="lang.html">Languages </a>(i learn 3 language German Russian Japanese) <br> planes <br> retro game console (<a href="beena.html">sega pico beena</a>) <br> eurovision! <br>
+And, also-ly, I have <a href="https://www.youtube.com/channel/UCh_GwF7UQsLzEyzX_ZJwkoA">youtube channel</a> ,where I upload videos about anythings.
+<p>here are things what i really really like in moment - BtW they mostly music based. Like rhythm game<a href="taiko.html">Taiko no tatsujin</a></p>
+<img height="340" src="Babyyyy.jpg">
+<audio controls>
+<source src="mind.mp3" type="audio/mpeg">
+</audio>
+<br>
+<p> and <a href="shiina.html">Sheena Ringo</a></p>
+<img src="shiina.png">
+<audio controls>
+<source src="shiina.mp3" type="audio/mpeg">
+</audio><br>
+Taiko no tatsujin is the best because i am <a href="cabinet.html">building arcade cabinet </a> in order to taiko no tatsujin.<br>
+Also, <a href="mewziq.html">these</a> are the <a href="mewziq.html">musics what I like</a>
+<br> <h3> <a href="things.html">Things</a></h3>
+<img src="crent.gif">
+<br><h3> <a href="images.html"> Just Like, Images, and stuff.. </a> </h3> <br> <div class="container">
+<iframe width="110" height="200" src="https://www.myinstants.com/instant/bruh/embed/" frameborder="0" scrolling="no"></iframe><iframe width="110" height="200" src="https://www.myinstants.com/instant/my-name-is-jeff/embed/" frameborder="0" scrolling="no"></iframe></div>
+<br><img src="Сулакский_каньон.jpg" width=600><br><img src="grar.jpg" width=600>
+
+<script>
+    function removeTransition(e) {
+      if (e.propertyName !== 'transform') return;
+      e.target.classList.remove('playing');
+    }
+  
+    function playSound(e) {
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+      if (!audio) return;
+  
+      key.classList.add('playing');
+      audio.currentTime = 0;
+      audio.play();
+    }
+  
+    const keys = Array.from(document.querySelectorAll('.key'));
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+    window.addEventListener('keydown', playSound);
+  </script> 
+
+<div class="keys">
+<div data-key="68" class="key">
+<kbd>D</kbd>
+<span class="sound">ka</span>
+</div>
+<div data-key="70" class="key">
+<kbd>F</kbd>
+<span class="sound">don</span>
+</div>
+<div data-key="74" class="key">
+<kbd>J</kbd>
+<span class="sound">don</span>
+</div>
+<div data-key="75" class="key">
+<kbd>D</kbd>
+<span class="sound">ka</span>
+</div>
+</div>
+<audio data-key="68" src="ka.mp3"></audio>
+<audio data-key="70" src="don.mp3"></audio>
+<audio data-key="74" src="don.mp3"></audio>
+<audio data-key="75" src="ka.mp3"></audio>
+</html>
