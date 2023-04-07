@@ -1,0 +1,66 @@
+<html>
+<head>
+<title>hello it is My Blog</title>
+</head>
+<style>body {
+      background-image: url('Shiina.png');} </style>
+	  <marquee direction="right" behavior="alternate"> hello it is My Blog </marquee>
+<h1> Here are some music videos what I like: </h1>
+<h3> This first one is アイデンティティ by her . <br>
+<video controls="controls"/>
+            <source src="identity.mp4"
+            type="video/mp4"> <br> </video> <br>
+			I love how she shows up when she says "バラバラに" and also that she is being draggred by a hose. the wholeTime
+<br><video controls="controls"/>
+        <source src="0127.mp4"
+            type="video/mp4">
+    </video>
+<br>
+This music song is an I like it one. because it is In the live Dynamite Out and also because it has beauty.
+<br>
+<script>
+    function removeTransition(e) {
+      if (e.propertyName !== 'transform') return;
+      e.target.classList.remove('playing');
+    }
+  
+    function playSound(e) {
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+      if (!audio) return;
+  
+      key.classList.add('playing');
+      audio.currentTime = 0;
+      audio.play();
+    }
+  
+    const keys = Array.from(document.querySelectorAll('.key'));
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+    window.addEventListener('keydown', playSound);
+  </script> 
+ <h1 style="color:white> <a href="index.html"> go BAKCK. </a> </h1>
+
+<div class="keys">
+<div data-key="68" class="key">
+<kbd>D</kbd>
+<span class="sound">ka</span>
+</div>
+<div data-key="70" class="key">
+<kbd>F</kbd>
+<span class="sound">don</span>
+</div>
+<div data-key="74" class="key">
+<kbd>J</kbd>
+<span class="sound">don</span>
+</div>
+<div data-key="75" class="key">
+<kbd>D</kbd>
+<span class="sound">ka</span>
+</div>
+</div>
+<audio data-key="68" src="ka.mp3"></audio>
+<audio data-key="70" src="don.mp3"></audio>
+<audio data-key="74" src="don.mp3"></audio>
+<audio data-key="75" src="ka.mp3"></audio>
+</html>
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="FILE.js"></script>
+<title>hello it is My Blog</title>
+<style>body {
+      background-image: url('pa.png');} </style>
+	  <marquee direction="right" behavior="alternate" style="color:white"> hello it is My Blog </marquee>
+<h2 style="color:white">I really really love this game</h2>
+</head>
+<div class="container"> 
+<img height=300 src="Babyyyy.jpg">
+<img height=300 src="taiko.png">
+<audio controls>
+<source src="17_song11.mp3" type="audio/mpeg">
+</audio>
+</div>
+<h3 style="color:white"> things what are relevant: </h3>
+<h4 style="color:white"> <a href="cabinet.html" style = "color:#FF99D8 "> Taiko arcade project </a> <br>
+<a href="collection.html" style = "color:#FF99D8"> The collection </a> <br>
+<a href="mewziq.html" style = "color:#FF99D8"> Musics what I like </a> <br>
+<a href="things.html" style = "color:#FF99D8"> cool Things what I like </a> <br>
+<a href="index.html" style = "color:#FF99D8"> go BACK. </a><br>
+THis is all i have to say
+<br>
+<audio controls>
+<source src="25_song14.mp3" type="audio/mpeg">
+</audio>
+<br> <img id="stanhope" src="quoddycrent.gif">
+<script>
+    function removeTransition(e) {
+      if (e.propertyName !== 'transform') return;
+      e.target.classList.remove('playing');
+    }
+  
+    function playSound(e) {
+      const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+      const key = document.querySelector(`div[data-key="${e.keyCode}"]`);
+      if (!audio) return;
+  
+      key.classList.add('playing');
+      audio.currentTime = 0;
+      audio.play();
+    }
+  
+    const keys = Array.from(document.querySelectorAll('.key'));
+    keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+    window.addEventListener('keydown', playSound);
+  </script> 
+
+<div class="keys">
+<div data-key="68" class="key">
+<kbd>D</kbd>
+<span class="sound">ka</span>
+</div>
+<div data-key="70" class="key">
+<kbd>F</kbd>
+<span class="sound">don</span>
+</div>
+<div data-key="74" class="key">
+<kbd>J</kbd>
+<span class="sound">don</span>
+</div>
+<div data-key="75" class="key">
+<kbd>D</kbd>
+<span class="sound">ka</span>
+</div>
+</div>
+<audio data-key="68" src="kat.ogg"></audio>
+<audio data-key="70" src="dong.ogg"></audio>
+<audio data-key="74" src="dong.ogg"></audio>
+<audio data-key="75" src="kat.ogg"></audio>
+</html>
+

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>how to taiko</h1>
+</head>
+<body>
+<p>defor
+Professional
+JoinedSep 25, 2015
+Messages560
+Reaction score353
+LocationWashington, DC
+Jan 12, 2016
+#48
+
+First off, connect each AD pin with a 10 kΩ resistor connected to AVCC.
+
+AD0 -- 10 kΩ -- AVCC
+AD1 -- 10 kΩ -- AVCC
+AD2 -- 10 kΩ -- AVCC
+AD3 -- 10 kΩ -- AVCC
+AD4 -- 10 kΩ -- AVCC
+AD5 -- 10 kΩ -- AVCC
+AD6 -- 10 kΩ -- AVCC
+AD7 -- 10 kΩ -- AVCC
+AD8 -- 10 kΩ -- AVCC
+
+This will serve as two purposes.
+1) to pull the AD inputs high when not connected to a drum, thus eliminating the random drum hits.
+2) to provide a positive reference voltage, but no current, to oppose the drum output which serves as a 2-pole variable resistor to ground.
+
+Now we need to connect the drum inputs- you might have to swap them around to match the pinout of your drum.
+
+Drum 1 output 1 -> AD0
+Drum 1 output 2 -> AD1
+Drum 1 output 3 -> AD2
+Drum 1 output 4 -> AD3
+
+Drum 2 output 1 -> AD4
+Drum 2 output 2 -> AD5
+Drum 2 output 3 -> AD6
+Drum 2 output 4 -> AD7
+
+Then you'll need to connect the grounds from each drum to AGND.
+
+Drum 1 GND 1 -> AGND
+Drum 1 GND 2 -> AGND
+Drum 1 GND 3 -> AGND
+Drum 1 GND 4 -> AGND
+Drum 2 GND 1 -> AGND
+Drum 2 GND 2 -> AGND
+Drum 2 GND 3 -> AGND
+Drum 2 GND 4 -> AGND
+
+From here, you can wire up the rest of the digital IO as a service panel (this is the suggested configuration):
+
+COIN (SPST Pushbutton)
+TEST (SPST Pushbutton)
+SERVICE (SPST Toggle)
+UP/DOWN (SPDT Momentary)
+ENTER (SPST Pushbutton)
+
+You WILL want to wire up a service panel in order to set the analog thresholds for the drums.
+
+Pretty sure I've explained this all correct... </p>
+<br>
+<br>
+<p>
